@@ -6,9 +6,12 @@ const elAsrTime = document.querySelector(".asr-time");
 const elShomTime = document.querySelector(".shom-time");
 const elXuftonTime = document.querySelector(".xufton-time");
 const elNamozday = document.querySelector(".js-day");
+const elTime = document.querySelector(".day-time");
+
+const x = Date();
+elTime.textContent = x.slice(0,-35);
 
 
-console.log(API_PATH);
 function getTime(API_PATH){
    fetch(API_PATH )
    .then((res)=> res.json())
@@ -22,3 +25,4 @@ function getTime(API_PATH){
    })
 }
 getTime(API_PATH);
+
